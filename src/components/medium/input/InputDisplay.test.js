@@ -1,7 +1,6 @@
 import React from 'react';
 import { expect } from 'chai';
 import Input from './Input';
-
 import { shallow } from 'enzyme';
 
 describe('Input Display, check, controll', () => {
