@@ -13,17 +13,17 @@ export default class ResetPassword extends React.Component {
         setTimeout(() => this.setState({ disabled: !this.state.disabled }), 500);
     }
     render() {
-        return(
+        return (
             <>
-                    <input
-                        type="email"
-                        disabled={this.state.disabled}
-                    />
-                    <button 
-                        disabled={this.state.disabled}
-                        onClick={this.clickDisabled}
-                    >
-                    </button>
+                <input
+                    type="email"
+                    disabled={this.state.disabled}
+                />
+                <button
+                    disabled={this.state.disabled}
+                    onClick={this.clickDisabled}
+                >
+                </button>
             </>
         )
     }

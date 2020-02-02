@@ -23,6 +23,6 @@ describe('Reseting users\'s password', () => {
 
         expect(getSubmitButton().prop('disabled')).to.equal(false);
         expect(getEmailInput().prop('disabled')).to.equal(false);
-        
+
     })
 })
