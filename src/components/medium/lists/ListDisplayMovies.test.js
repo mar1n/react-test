@@ -1,6 +1,6 @@
 import React from 'react';
 import { expect } from 'chai';
-import Chess from './Chess';
+import Movies from './Movies';
 
 import { shallow } from 'enzyme';
 
@@ -25,12 +25,18 @@ describe('Dispaly a list of movies', () => {
             'Airplane! (1980), directed by David Zucker',
             'Ghostbusters (1984), directed by Ivan Reitman'
         ]
-    }].forEach(scenario.it, () => {
-    const wrppper = shallow(<Movies list={scenario.list} />);
-    const movies = wrapper.find('p');
+    }].forEach(scenario => {
 
-    expect(movies).to.have.length(2);
-    expect(movies.at(0).text()).to.equal(sceanrio.expected[0]);
-    expect(movies.at(1).text()).to.equal(sceanrio.expected[1]);
+        it(scenario.it, () => {
+    
+            //when
+            const wrapper = shallow(<Movies list={scenario.list} />);
+            const movies = wrapper.find('p');
+    
+            //then
+            expect(movies).to.have.length(2);
+            expect(movies.at(0).text()).to.equal(scenario.expected[0]);
+            expect(movies.at(1).text()).to.equal(scenario.expected[1]);
+        });
 });
 });
