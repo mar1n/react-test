@@ -3,7 +3,6 @@ import { expect } from 'chai';
 import Chess from './Chess';
 
 import { shallow } from 'enzyme';
-import { Simulate } from 'react-dom/test-utils';
 
 describe('Create chess game', () => {
     [
