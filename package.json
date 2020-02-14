@@ -35,6 +35,8 @@
     ]
   },
   "devDependencies": {
-    "chai": "^4.2.0"
+    "chai": "^4.2.0",
+    "jsdom": "16.1.0",
+    "jsdom-global": "3.0.2"
   }
 }
