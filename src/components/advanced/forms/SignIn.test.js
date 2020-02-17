@@ -21,5 +21,21 @@ describe('Sign In Form', () => {
         };
 
         expect(getSubmitButton().prop('disabled')).to.equal(true);
+        
+        setValue(getEmailInput(), 'david');
+        expect(getSubmitButton().prop('disabled')).to.equal(true);
+
+        setValue(getEmailInput(), 'david@hasselhoff.com');
+        expect(getSubmitButton().prop('disabled')).to.equal(true);
+
+        setValue(getPasswordInput(), 'abc');
+        expect(getSubmitButton().prop('disabled')).to.equal(true);
+
+        setValue(getEmailInput(), '');
+        expect(getSubmitButton().prop('disabled')).to.equal(true);
+
+        setValue(getEmailInput(), 'david@hasselhoff.com');
+        setValue(getPasswordInput(), 'assdddd');
+        expect(getSubmitButton().prop('disabled')).to.equal(false);
     })
 })
